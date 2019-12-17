@@ -31,7 +31,7 @@ app.use(express.static(__dirname));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8000;
 
 module.exports = app.listen(port, () => {
 	console.log(`Server is running http://localhost:${port}, Ctrl + C to stop`)
