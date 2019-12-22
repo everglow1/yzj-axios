@@ -1,3 +1,4 @@
+import { request } from "https";
 
 export type Method = 'get' | 'GET' | 'delete' | 'Delete' | 'head' | 'HEAD' | 'options' | 'OPTIONS' | 'post' | 'POST' | 'put' | 'PUT' | 'patch' | 'PATCH'
 
@@ -14,8 +15,9 @@ export interface AxiosResponse {
 	data: any
 	status: number
 	statusText: string
-	Headers: any
+	headers: any
 	config: AxiosRequestConfig
+	request: any
 }
 
 export interface AxiosPromise extends Promise<AxiosResponse> {
